@@ -256,6 +256,7 @@ class _HomePageState extends State<HomePage> {
           mapY += step;
         });
 
+        // If boy moves up to the pokelab door, then change the location
         // couldn't use the double.parse.fixedasnum() here. hence directly used the mapX & mapY variables
         // but the direct approach also wasn't perfect.
         // hence use the cleanNum function to reduce everything down to 4 decimals & then it was perfect
@@ -265,6 +266,14 @@ class _HomePageState extends State<HomePage> {
             currentLocation = 'pokelab';
             labMapX = -0.475;
             labMapY = -4.95;
+          });
+        }
+
+        // if boy moves up to prof oak, then he turns & dialogue/ fight starts
+        if (cleanNum(mapX) == cleanNum(-0.6750000000000003) &&
+            cleanNum(mapY) == cleanNum(4.949999999999999)) {
+          setState(() {
+            oakDirection = "Right";
           });
         }
       }

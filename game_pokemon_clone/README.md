@@ -1,16 +1,9 @@
 # game_pokemon_clone
+# pokemon_gba
+Trying Pokemon game using Flutter (Android game dev) 
 
-A new Flutter project.
+Followed youtube tutorial of MITCH KOKO - however, he conveniently left out the fun parts of coding like pokebattle & UI.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Things to add:
+- Add a message box when the prof oak turns to you (maybe add a UI folder to lib folder and then display it on the stack widget after the map & boy & oak widget)
+- Start a poke battle
