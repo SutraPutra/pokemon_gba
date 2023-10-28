@@ -1,11 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:game_pokemon_clone/button.dart';
+import 'package:game_pokemon_clone/ui/button.dart';
 import 'package:game_pokemon_clone/characters/boy.dart';
 import 'package:game_pokemon_clone/maps/littleroot.dart';
 import 'package:game_pokemon_clone/maps/pokelab.dart';
 import 'package:game_pokemon_clone/characters/oak.dart';
+import 'package:game_pokemon_clone/ui/dialoguebox.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +51,7 @@ class _HomePageState extends State<HomePage> {
   // static const oakX = 0.125;
   // static const oakY = 0.9;
   bool chatStarted = false;
-  int countPressingA = -1;
+  // int countPressingA = -1;
 
   // no mans land for littleroot
   List<List<double>> noMansLandLittleroot = [
@@ -274,6 +275,7 @@ class _HomePageState extends State<HomePage> {
             cleanNum(mapY) == cleanNum(4.949999999999999)) {
           setState(() {
             oakDirection = "Right";
+            chatStarted = true;
           });
         }
       }
@@ -436,6 +438,13 @@ class _HomePageState extends State<HomePage> {
                       direction: boyDirection,
                     ),
                   ),
+
+                  // dialogue box
+
+                  Container(
+                    alignment: const Alignment(0, 1),
+                    child: DialogueBox(chatStarted: chatStarted),
+                  )
                 ],
               ),
             ),
